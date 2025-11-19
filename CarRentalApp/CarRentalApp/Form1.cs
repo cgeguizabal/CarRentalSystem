@@ -21,6 +21,10 @@ namespace CarRentalApp
         {
 
         }
-    
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"Than you {tbCustomerName.Text} for Renting a Car with us");
+        }
     }
 }

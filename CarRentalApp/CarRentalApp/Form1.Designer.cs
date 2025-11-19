@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.custumerName = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tbCustomerName = new System.Windows.Forms.TextBox();
+            this.lbCustumerName = new System.Windows.Forms.Label();
+            this.dtpDateRented = new System.Windows.Forms.DateTimePicker();
+            this.dtpDateReturned = new System.Windows.Forms.DateTimePicker();
+            this.lbDateRented = new System.Windows.Forms.Label();
+            this.lbDateReturned = new System.Windows.Forms.Label();
+            this.cbTypeOfBox = new System.Windows.Forms.ComboBox();
+            this.lbTypeOfCar = new System.Windows.Forms.Label();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -49,108 +49,108 @@
             this.label1.Size = new System.Drawing.Size(374, 47);
             this.label1.TabIndex = 0;
             this.label1.Text = "CAR RENTAL SYSTEM";
-            
             // 
-            // textBox1
+            // tbCustomerName
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(332, 22);
-            this.textBox1.TabIndex = 1;
+            this.tbCustomerName.Location = new System.Drawing.Point(16, 112);
+            this.tbCustomerName.Name = "tbCustomerName";
+            this.tbCustomerName.Size = new System.Drawing.Size(332, 22);
+            this.tbCustomerName.TabIndex = 1;
             // 
-            // custumerName
+            // lbCustumerName
             // 
-            this.custumerName.AutoSize = true;
-            this.custumerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.custumerName.Location = new System.Drawing.Point(12, 89);
-            this.custumerName.Name = "custumerName";
-            this.custumerName.Size = new System.Drawing.Size(144, 20);
-            this.custumerName.TabIndex = 2;
-            this.custumerName.Text = "Customer Name";
+            this.lbCustumerName.AutoSize = true;
+            this.lbCustumerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCustumerName.Location = new System.Drawing.Point(12, 89);
+            this.lbCustumerName.Name = "lbCustumerName";
+            this.lbCustumerName.Size = new System.Drawing.Size(144, 20);
+            this.lbCustumerName.TabIndex = 2;
+            this.lbCustumerName.Text = "Customer Name";
             // 
-            // dateTimePicker1
+            // dtpDateRented
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(16, 189);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(332, 22);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dtpDateRented.Location = new System.Drawing.Point(16, 189);
+            this.dtpDateRented.Name = "dtpDateRented";
+            this.dtpDateRented.Size = new System.Drawing.Size(332, 22);
+            this.dtpDateRented.TabIndex = 3;
             // 
-            // dateTimePicker2
+            // dtpDateReturned
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(381, 189);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(332, 22);
-            this.dateTimePicker2.TabIndex = 4;
+            this.dtpDateReturned.Location = new System.Drawing.Point(381, 189);
+            this.dtpDateReturned.Name = "dtpDateReturned";
+            this.dtpDateReturned.Size = new System.Drawing.Size(332, 22);
+            this.dtpDateReturned.TabIndex = 4;
             // 
-            // label2
+            // lbDateRented
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 166);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Date Rented";
+            this.lbDateRented.AutoSize = true;
+            this.lbDateRented.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDateRented.Location = new System.Drawing.Point(12, 166);
+            this.lbDateRented.Name = "lbDateRented";
+            this.lbDateRented.Size = new System.Drawing.Size(114, 20);
+            this.lbDateRented.TabIndex = 5;
+            this.lbDateRented.Text = "Date Rented";
             // 
-            // label3
+            // lbDateReturned
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(377, 166);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Date Returned";
+            this.lbDateReturned.AutoSize = true;
+            this.lbDateReturned.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDateReturned.Location = new System.Drawing.Point(377, 166);
+            this.lbDateReturned.Name = "lbDateReturned";
+            this.lbDateReturned.Size = new System.Drawing.Size(131, 20);
+            this.lbDateReturned.TabIndex = 6;
+            this.lbDateReturned.Text = "Date Returned";
             // 
-            // comboBox1
+            // cbTypeOfBox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbTypeOfBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTypeOfBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbTypeOfBox.FormattingEnabled = true;
+            this.cbTypeOfBox.Items.AddRange(new object[] {
             "Honda",
             "Toyota",
             "Lada",
             "Buggy"});
-            this.comboBox1.Location = new System.Drawing.Point(16, 279);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(332, 24);
-            this.comboBox1.TabIndex = 7;
+            this.cbTypeOfBox.Location = new System.Drawing.Point(16, 279);
+            this.cbTypeOfBox.Name = "cbTypeOfBox";
+            this.cbTypeOfBox.Size = new System.Drawing.Size(332, 24);
+            this.cbTypeOfBox.TabIndex = 7;
             // 
-            // label4
+            // lbTypeOfCar
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 256);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Type Of Car";
+            this.lbTypeOfCar.AutoSize = true;
+            this.lbTypeOfCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTypeOfCar.Location = new System.Drawing.Point(12, 256);
+            this.lbTypeOfCar.Name = "lbTypeOfCar";
+            this.lbTypeOfCar.Size = new System.Drawing.Size(111, 20);
+            this.lbTypeOfCar.TabIndex = 8;
+            this.lbTypeOfCar.Text = "Type Of Car";
             // 
-            // button1
+            // btnSubmit
             // 
-            this.button1.Font = new System.Drawing.Font("Mont Heavy DEMO", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(585, 373);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 54);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "SUBMIT";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSubmit.Font = new System.Drawing.Font("Mont Heavy DEMO", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Location = new System.Drawing.Point(585, 373);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(183, 54);
+            this.btnSubmit.TabIndex = 9;
+            this.btnSubmit.Text = "SUBMIT";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.custumerName);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.lbTypeOfCar);
+            this.Controls.Add(this.cbTypeOfBox);
+            this.Controls.Add(this.lbDateReturned);
+            this.Controls.Add(this.lbDateRented);
+            this.Controls.Add(this.dtpDateReturned);
+            this.Controls.Add(this.dtpDateRented);
+            this.Controls.Add(this.lbCustumerName);
+            this.Controls.Add(this.tbCustomerName);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -163,15 +163,15 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label custumerName;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbCustomerName;
+        private System.Windows.Forms.Label lbCustumerName;
+        private System.Windows.Forms.DateTimePicker dtpDateRented;
+        private System.Windows.Forms.DateTimePicker dtpDateReturned;
+        private System.Windows.Forms.Label lbDateRented;
+        private System.Windows.Forms.Label lbDateReturned;
+        private System.Windows.Forms.ComboBox cbTypeOfBox;
+        private System.Windows.Forms.Label lbTypeOfCar;
+        private System.Windows.Forms.Button btnSubmit;
     }
 }
 
