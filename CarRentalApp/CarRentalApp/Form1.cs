@@ -24,7 +24,19 @@ namespace CarRentalApp
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Than you {tbCustomerName.Text} for Renting a Car with us");
+
+            if (string.IsNullOrWhiteSpace(tbCustomerName.Text) || string.IsNullOrWhiteSpace(cbTypeOfBox.Text) || 
+                string.IsNullOrWhiteSpace(dtpDateReturned.Text) || string.IsNullOrWhiteSpace(dtpDateRented.Text) )
+            {
+                MessageBox.Show("Please fill all required fills.");
+                return;
+            }
+
+            MessageBox.Show($"Your order is :\n" +
+                $"Day of retal: {dtpDateRented.Text}\n" +
+                $"Day of return: {dtpDateReturned.Text}\n" +
+                $"Type of Car: {cbTypeOfBox.Text}\n" +
+                $"Thank you {tbCustomerName.Text} for Renting a Car with us");
         }
     }
 }
