@@ -33,32 +33,53 @@ namespace CarRentalApp
             var typeOfCar = cbTypeOfBox.SelectedItem.ToString();
             */
 
-            double cost = Convert.ToDouble(tbCost.Text);
+            try {
+                double cost = Convert.ToDouble(tbCost.Text);
 
-            DateTime dateRented1 = dtpDateRented.Value;
-            DateTime dateReturned1 = dtpDateReturned.Value;
+                DateTime dateRented1 = dtpDateRented.Value;
+                DateTime dateReturned1 = dtpDateReturned.Value;
+                bool isValid = true;
+                var errorMessage = "";
 
-            if(dateReturned1 < dateRented1)
-            {
-                MessageBox.Show("Return date cannot be earlier than rented date.");
-                return;
+                if (dateReturned1 < dateRented1)
+                {
+                    isValid = false;
+                    errorMessage += "Return date cannot be earlier than rented date.\n";
+                    //MessageBox.Show("Return date cannot be earlier than rented date.");
+                    //return;
+                }
+
+                if (string.IsNullOrWhiteSpace(tbCustomerName.Text) || string.IsNullOrWhiteSpace(cbTypeOfBox.Text) ||
+                    string.IsNullOrWhiteSpace(dtpDateReturned.Text) || string.IsNullOrWhiteSpace(dtpDateRented.Text))
+                {
+                    isValid = false;
+                    errorMessage += "Please fill all required fills.\n";
+                    //MessageBox.Show("Please fill all required fills.");
+                    //return;
+                }
+
+                if(isValid)
+                {
+                    MessageBox.Show($"Your order is :\n" +
+                   $"Date Rented: {dtpDateRented.Text}\n" +
+                   $"Day of return: {dtpDateReturned.Text}\n" +
+                   $"Type of Car: {cbTypeOfBox.Text}\n" +
+                   $"Cost: ${cost}\n" +
+               $"Thank you {tbCustomerName.Text} for Renting a Car with us");
+                }
+                else
+                {
+                    MessageBox.Show(errorMessage);
+                }
+
+               
             }
-
-            if (string.IsNullOrWhiteSpace(tbCustomerName.Text) || string.IsNullOrWhiteSpace(cbTypeOfBox.Text) || 
-                string.IsNullOrWhiteSpace(dtpDateReturned.Text) || string.IsNullOrWhiteSpace(dtpDateRented.Text) )
+            catch(Exception ex)
             {
-                MessageBox.Show("Please fill all required fills.");
+                MessageBox.Show("An error occurred: " + ex.Message);
                 return;
+                //Throw;
             }
-
-            MessageBox.Show($"Your order is :\n" +
-                $"Date Rented: {dtpDateRented.Text}\n" +
-                $"Day of return: {dtpDateReturned.Text}\n" +
-                $"Type of Car: {cbTypeOfBox.Text}\n" +
-                $"Cost: {cost}\n" +
-            $"Thank you {tbCustomerName.Text} for Renting a Car with us");
-        }
-
-        
+        }  
     }
 }
