@@ -23,7 +23,26 @@ namespace CarRentalApp
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
+
         {
+
+            /*
+            string curtomerName = tbCustomerName.Text;
+            string dateRented = dtpDateRented.Value.ToString();
+            string dateReturned = dtpDateReturned.Value.ToString();
+            var typeOfCar = cbTypeOfBox.SelectedItem.ToString();
+            */
+
+            double cost = Convert.ToDouble(tbCost.Text);
+
+            DateTime dateRented1 = dtpDateRented.Value;
+            DateTime dateReturned1 = dtpDateReturned.Value;
+
+            if(dateReturned1 < dateRented1)
+            {
+                MessageBox.Show("Return date cannot be earlier than rented date.");
+                return;
+            }
 
             if (string.IsNullOrWhiteSpace(tbCustomerName.Text) || string.IsNullOrWhiteSpace(cbTypeOfBox.Text) || 
                 string.IsNullOrWhiteSpace(dtpDateReturned.Text) || string.IsNullOrWhiteSpace(dtpDateRented.Text) )
@@ -33,10 +52,13 @@ namespace CarRentalApp
             }
 
             MessageBox.Show($"Your order is :\n" +
-                $"Day of retal: {dtpDateRented.Text}\n" +
+                $"Date Rented: {dtpDateRented.Text}\n" +
                 $"Day of return: {dtpDateReturned.Text}\n" +
                 $"Type of Car: {cbTypeOfBox.Text}\n" +
-                $"Thank you {tbCustomerName.Text} for Renting a Car with us");
+                $"Cost: {cost}\n" +
+            $"Thank you {tbCustomerName.Text} for Renting a Car with us");
         }
+
+        
     }
 }

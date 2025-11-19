@@ -38,6 +38,8 @@
             this.cbTypeOfBox = new System.Windows.Forms.ComboBox();
             this.lbTypeOfCar = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.lbCost = new System.Windows.Forms.Label();
+            this.tbCost = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -137,11 +139,30 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // lbCost
+            // 
+            this.lbCost.AutoSize = true;
+            this.lbCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCost.Location = new System.Drawing.Point(377, 89);
+            this.lbCost.Name = "lbCost";
+            this.lbCost.Size = new System.Drawing.Size(48, 20);
+            this.lbCost.TabIndex = 11;
+            this.lbCost.Text = "Cost";
+            // 
+            // tbCost
+            // 
+            this.tbCost.Location = new System.Drawing.Point(381, 112);
+            this.tbCost.Name = "tbCost";
+            this.tbCost.Size = new System.Drawing.Size(332, 22);
+            this.tbCost.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbCost);
+            this.Controls.Add(this.tbCost);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lbTypeOfCar);
             this.Controls.Add(this.cbTypeOfBox);
@@ -172,6 +193,8 @@
         private System.Windows.Forms.ComboBox cbTypeOfBox;
         private System.Windows.Forms.Label lbTypeOfCar;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Label lbCost;
+        private System.Windows.Forms.TextBox tbCost;
     }
 }
 
