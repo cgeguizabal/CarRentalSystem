@@ -131,7 +131,7 @@
       <DependentUpon>CarRentalDB.edmx</DependentUpon>
       <LastGenOutput>CarRentalDB.cs</LastGenOutput>
     </Content>
-    <Content Include="Readme.txt" />
+    <Content Include="README.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
